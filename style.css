@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.time-select,
+.sound-picker {
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.time-select button,
+.sound-picker button {
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all 0.5s ease;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  padding: 30px;
+  border-radius: 50%;
+}
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+.sound-picker button:nth-child(2) {
+  background: #a14f49;
+}
+.sound-picker button img {
+  height: 100%;
+}
+
+.time-select button:hover {
+  background: white;
+  color: black;
+}
+
+.player-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 35%;
+  left: 51%;
+  cursor: pointer;
+  font-size: 20px !important;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+.player-container svg circle {
+  transition: all 0.2s ease-in-out;
+}
+.time-display {
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  bottom: 10%;
+}
+
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+}
+
+@media only screen and (max-width: 700px){
+
+    
+  
+.app{
+  width: 100vw !important;
+  height: 100vh !important;
+}
+.app .vid-container{
+  width: 100vw !important;
+  height: 100% !important;
+}
+
+video{
+  position: absolute;
+  width: 100vw !important;
+  height: 100% !important;
+  
+}
+.player-container .play{
+  width: 7vw;
+  height: 7vh;
+  position: relative;
+  top: -8%;
+  left: -90%;
+
+  
+}
+
+.player-container{
+  position: absolute;
+  left: 50%;
+
+}
+
+.player-container .track-outline{
+  width: 30vw;
+  height: 40vh;
+  position: absolute;
+  top: 43% !important;
+  left: -50% !important;
+  
+
+  
+}
+
+.player-container .moving-outline{
+  display: none;
+
+}
+.time-display{
+  width: 10vw !important;
+  height: 10vh !important;
+  align-items: center;
+  font-weight: 800;
+  font-size: 15px;
+  position: absolute;
+  top: 60%;
+  left: -100%;
+}
+.replay{
+  position:absolute;
+  left: -90%;
+}
+.time-select{
+  width: 80vw;
+  height: 40vh;
+  position: absolute;
+  left: -30% !important;
+  line-height: 20px;
+  
+}
+.time-select button{
+  font-size: 15px !important;
+
+}
+.sound-picker{
+  width: 10vw !important;
+  height: 10vh !important;
+  position: absolute;
+  right:14%;
+
+}
+
+.sound-picker button{
+ width: 20vw;
+ height: 10vh;
+ border-radius: 0%;
+ 
+}
+.sound-picker .btn_a{
+  margin-bottom: 50px;
+
+  
+}
+
+.sound-picker .btn_a img{
+  position: absolute;
+  top: -55%;
+}
+
+.sound-picker .btn_b img{
+  position: absolute;
+  top:108%
+}
+.sound-picker img{
+  width: 10vw !important;
+  height: 5vh !important;
+  position: absolute;
+  left: 0;
+  
+  
+
+}
+}
